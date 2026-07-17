@@ -1,60 +1,40 @@
-# Smart To-Do List Manager
+from expense_tracker import add_expense, view_expenses, calculate_total, delete_expense
 
-tasks = []
 
-while True:
+def menu():
+    while True:
+        print("\n===== Expense Tracker =====")
+        print("1. Add Expense")
+        print("2. View Expenses")
+        print("3. Calculate Total Expense")
+        print("4. Delete Expense")
+        print("5. Exit")
 
-    print("\n==============================")
-    print(" SMART TO-DO LIST MANAGER")
-    print("==============================")
-    print("1. Add Task")
-    print("2. View Tasks")
-    print("3. Delete Task")
-    print("4. Exit")
+        choice = input("Enter your choice: ")
 
-    choice = input("Enter your choice: ")
+        if choice == "1":
+            amount = input("Enter amount: ")
+            category = input("Enter category: ")
+            description = input("Enter description: ")
 
-    # Add Task
-    if choice == "1":
-        task = input("Enter your task: ")
-        tasks.append(task)
-        print("Task added successfully!")
+            add_expense(amount, category, description)
 
-    # View Tasks
-    elif choice == "2":
-        if len(tasks) == 0:
-            print("No tasks available.")
+        elif choice == "2":
+            view_expenses()
+
+        elif choice == "3":
+            calculate_total()
+
+        elif choice == "4":
+            index = int(input("Enter expense number to delete: "))
+            delete_expense(index)
+
+        elif choice == "5":
+            print("Thank you for using Expense Tracker!")
+            break
+
         else:
-            print("\nYour Tasks:")
-            for i, task in enumerate(tasks, start=1):
-                print(f"{i}. {task}")
+            print("Invalid choice! Try again.")
 
-    # Delete Task
-    elif choice == "3":
-        if len(tasks) == 0:
-            print("No tasks to delete.")
-        else:
-            print("\nYour Tasks:")
-            for i, task in enumerate(tasks, start=1):
-                print(f"{i}. {task}")
 
-            try:
-                number = int(input("Enter task number to delete: "))
-
-                if 1 <= number <= len(tasks):
-                    removed = tasks.pop(number - 1)
-                    print(f'"{removed}" deleted successfully!')
-                else:
-                    print("Invalid task number.")
-
-            except ValueError:
-                print("Please enter a valid number.")
-
-    # Exit
-    elif choice == "4":
-        print("Thank you for using Smart To-Do List Manager!")
-        break
-
-    # Invalid Choice
-    else:
-        print("Invalid choice. Please try again.")
+menu()
