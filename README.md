@@ -1,55 +1,37 @@
-# 🔐 Random Password Generator
+# General Knowledge Quiz
 
-# 📌 Project Overview
+## Project Overview
 
-This project is developed as part of the DecodeLabs Python Programming Internship (Project 3).
+This project is developed as part of the DecodeLabs Internship Python Programming tasks.
 
-The Random Password Generator allows users to generate secure and random passwords of their desired length using Python's built-in `random` and `string` modules.
+The General Knowledge Quiz is a Python-based console application that asks users three general knowledge questions, checks their answers, calculates their score, and displays performance feedback.
 
-# ✨ Features
+## Features
 
-- User enters the desired password length.
-- Generates a strong random password.
-- Includes:
-  - Uppercase letters (A-Z)
-  - Lowercase letters (a-z)
-  - Numbers (0-9)
-  - Special characters (!@#$%^&*)
+- User friendly quiz interface
+- Three multiple general knowledge questions
+- Automatic answer checking
+- Score calculation system
+- Performance feedback
 
-# 🛠️ Technologies Used
+## Technologies Used
 
 - Python
-- random module
-- string module
 
-# ▶️ How to Run
+## How to Run
 
-1. Open the project in VS Code.
-2. Open the terminal.
+1. Download the project files.
+2. Open terminal in project folder.
 3. Run:
 
-```bash
-python password_generator.py
-```
+python general_knowledge_quiz.py
 
-4. Enter the desired password length.
-5. The program will generate a secure random password.
+## Learning Outcomes
 
-# 📷 Sample Output
+Through this project, I practiced:
 
-```
-===================================
-RANDOM PASSWORD GENERATOR
-===================================
-
-Enter password length: 10
-
-Generated Password:
-jr5{YZYBpL
-```
-
-# 👩‍💻 Author
-
-Izza Zahid
-
-DecodeLabs Python Programming Internship - Batch 2026
+- Python variables
+- User input handling
+- Conditional statements
+- Functions
+- Program structure 
